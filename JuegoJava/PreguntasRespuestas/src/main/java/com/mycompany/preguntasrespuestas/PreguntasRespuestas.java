@@ -66,11 +66,48 @@ public class PreguntasRespuestas {
             indiceOpcion++;
        }
        
-        System.out.println("Escribe el numero que corresponda a tu respuesta o puedes retirarte escribiendo 'R' en cualquiera de los casos, presiona enter despues" );
-        var opcionElegida= Scan.next();
-        boolean esNumerico =  opcionElegida.matches("[+-]?\\d*(\\.\\d+)?");
-        System.out.println(esNumerico);
+       boolean esValido = false;
+       String opcionElegida="";
+        do{
+            System.out.println("Escribe el numero que corresponda a tu respuesta o puedes retirarte escribiendo 'R' en cualquiera de los casos, presiona enter despues" );
+           opcionElegida= Scan.next();
+           boolean esNumerico =  opcionElegida.matches("[+-]?\\d*(\\.\\d+)?");
+
+           if(esNumerico){
+               var opcionNumerica = Integer.parseInt(opcionElegida);
+               if(opcionNumerica >=1 && opcionNumerica <= indiceOpcion)
+               {
+                    esValido = true;
+               }
+               else 
+               {
+                    System.out.println("Selección no corresponde a las opciones" );
+               }
+           }
+           else
+           {
+               var elegida = opcionElegida.toUpperCase();
+               if("R".equals(elegida))
+               {
+                   esValido = true;
+               }
+               else 
+               {
+                   System.out.println("Selección no corresponde a las opciones" );
+               }
+           }
+        }while(!esValido);
         
+        
+        boolean esNumerico =  opcionElegida.matches("[+-]?\\d*(\\.\\d+)?");
+       
+        if(esNumerico){
+         var opcionNumerica = Integer.parseInt(opcionElegida);
+         var opcionRespuesta = respuestasRonda.get(opcionNumerica-1);
+         System.out.println(opcionRespuesta.isRespuestaCorrecta());
+        } 
+        else {
+        }
        System.out.println("¿Deseas jugar ahora?  (S/N)");
        respuesta= Scan.next();
        l = respuesta.toUpperCase();
@@ -83,4 +120,5 @@ public class PreguntasRespuestas {
       
       
     }
+
 }

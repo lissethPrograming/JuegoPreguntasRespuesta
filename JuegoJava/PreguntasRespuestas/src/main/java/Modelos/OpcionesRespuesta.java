@@ -16,7 +16,7 @@ public class OpcionesRespuesta {
     
     private String descripcion;
     
-    public boolean respuestaCorrecta;
+    private boolean respuestaCorrecta;
     
     
 
