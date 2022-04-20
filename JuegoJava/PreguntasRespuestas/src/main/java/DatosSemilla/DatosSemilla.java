@@ -13,6 +13,21 @@ import java.util.Arrays;
  * @author USER
  */
 public class DatosSemilla {
+    
+    public List<Categorias> categorias;
+    public List<Nivel> niveles;
+    public List<OpcionesRespuesta> opcionesRespuestas;
+    public List<Pregunta> preguntas;
+
+    public DatosSemilla() {
+        categorias= this.AddCategoria();
+        niveles= this.AddNivel();
+        opcionesRespuestas= this.AddOpcionesRespuesta();
+        preguntas= this.AddPregunta();
+              
+    }
+    
+    
 
      public List<Categorias> AddCategoria()
         {

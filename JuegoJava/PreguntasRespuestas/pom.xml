@@ -10,4 +10,5 @@
         <maven.compiler.target>18</maven.compiler.target>
         <exec.mainClass>com.mycompany.preguntasrespuestas.PreguntasRespuestas</exec.mainClass>
     </properties>
+    
 </project>

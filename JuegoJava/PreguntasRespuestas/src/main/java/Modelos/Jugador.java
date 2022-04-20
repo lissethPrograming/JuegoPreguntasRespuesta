@@ -21,6 +21,11 @@ public class Jugador {
         this.nombre = nombre;
         this.partidas = partidas;
     }
+
+    public Jugador() {
+        nombre = "";
+    }
+    
     
     
 
