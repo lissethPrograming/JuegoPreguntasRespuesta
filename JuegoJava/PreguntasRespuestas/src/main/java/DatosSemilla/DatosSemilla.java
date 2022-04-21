@@ -4,9 +4,9 @@
  */
 package DatosSemilla;
 
-import java.util.List;
+import java.util.*;
 import Modelos.*;
-import java.util.Arrays;
+
 
 /**
  *
@@ -18,12 +18,17 @@ public class DatosSemilla {
     public List<Nivel> niveles;
     public List<OpcionesRespuesta> opcionesRespuestas;
     public List<Pregunta> preguntas;
+    public List<Partidas> partidas;
+    public List<Ronda> ronda;
 
     public DatosSemilla() {
         categorias= this.AddCategoria();
         niveles= this.AddNivel();
         opcionesRespuestas= this.AddOpcionesRespuesta();
         preguntas= this.AddPregunta();
+        partidas= new ArrayList<Partidas>(); 
+        ronda= new ArrayList<Ronda>();
+        
               
     }
     

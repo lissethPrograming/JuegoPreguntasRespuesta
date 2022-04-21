@@ -24,11 +24,10 @@ public class Partidas {
     
     
 
-    public Partidas(int id, Estado estado, double puntaje, List<Ronda> ronda, String nombre) {
+    public Partidas(int id, Estado estado, double puntaje, String nombre) {
         this.id = id;
         this.estado = estado;
         this.puntaje = puntaje;
-        this.ronda = ronda;
         this.nombre = nombre;
     }
     
